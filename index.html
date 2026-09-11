@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="羽見 Parrot Atlas：探索鸚鵡的色彩、性格與互動魅力。" />
+  <title>羽見 Parrot Atlas｜鸚鵡主題靜態網站</title>
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="羽見首頁">
+      <span class="brand-mark">羽</span>
+      <span>羽見 <b>Parrot Atlas</b></span>
+    </a>
+    <nav class="nav" aria-label="主要導覽">
+      <a href="#species">鸚鵡圖鑑</a>
+      <a href="#media">多媒體</a>
+      <a href="#about">關於網站</a>
+    </nav>
+    <button class="menu-btn" aria-label="開啟選單" aria-expanded="false">☰</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">PARROT FIELD NOTES / 001</p>
+        <h1>把熱帶的色彩，<br><span>收進一座會說故事的鳥類圖鑑。</span></h1>
+        <p class="lead">從金剛鸚鵡的高彩度羽色，到玄鳳鸚鵡靈動的冠羽，再到非洲灰鸚鵡的敏銳觀察力——這是一個為鸚鵡知識、影像與互動作品而設計的可擴充靜態網站。</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#species">開始探索</a>
+          <button class="btn ghost" id="shuffleBtn">隨機認識一種</button>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="鸚鵡主題視覺">
+        <div class="orb orb-a"></div>
+        <div class="orb orb-b"></div>
+        <div class="bird-card big-card">
+          <span class="card-index">ARA / 01</span>
+          <div class="parrot-illustration macaw" aria-hidden="true">
+            <span class="head"></span><span class="body"></span><span class="wing"></span><span class="beak"></span><span class="tail"></span><span class="eye"></span>
+          </div>
+          <div class="card-caption"><b>Macaw</b><small>雨林裡的高彩度訊號</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="網站特色">
+      <div><strong>03</strong><span>範例條目</span></div>
+      <div><strong>05</strong><span>媒體類型</span></div>
+      <div><strong>∞</strong><span>可擴充內容</span></div>
+    </section>
+
+    <section class="section" id="species">
+      <div class="section-heading">
+        <div><p class="eyebrow">SPECIES COLLECTION</p><h2>三種個性，三種羽色節奏</h2></div>
+        <div class="filters" role="group" aria-label="篩選鸚鵡">
+          <button class="filter is-active" data-filter="all">全部</button>
+          <button class="filter" data-filter="large">大型</button>
+          <button class="filter" data-filter="medium">中型</button>
+          <button class="filter" data-filter="small">小型</button>
+        </div>
+      </div>
+
+      <div class="cards-grid" id="speciesGrid">
+        <article class="species-card" data-size="large" id="macaw">
+          <div class="species-media gradient-macaw">
+            <span class="media-label">IMAGE SLOT</span>
+            <div class="mini-parrot macaw-mini"></div>
+          </div>
+          <div class="species-content">
+            <div class="meta-row"><span>01 / 金剛鸚鵡</span><span>大型</span></div>
+            <h3>Macaw</h3>
+            <p>像把整片雨林穿在身上。金剛鸚鵡擁有醒目的藍、黃、紅、綠羽色，也以高互動性與強烈存在感聞名。</p>
+            <div class="tags"><span>社交性</span><span>高彩度</span><span>長尾羽</span></div>
+            <button class="text-link open-modal" data-entry="macaw">查看完整條目 ↗</button>
+          </div>
+        </article>
+
+        <article class="species-card" data-size="small" id="cockatiel">
+          <div class="species-media gradient-cockatiel">
+            <span class="media-label">IMAGE SLOT</span>
+            <div class="mini-parrot cockatiel-mini"></div>
+          </div>
+          <div class="species-content">
+            <div class="meta-row"><span>02 / 玄鳳鸚鵡</span><span>小型</span></div>
+            <h3>Cockatiel</h3>
+            <p>冠羽就是牠的表情符號。柔和灰羽、黃色臉頰與橘色耳斑，讓玄鳳鸚鵡帶著親近、輕盈的日常感。</p>
+            <div class="tags"><span>冠羽</span><span>親人</span><span>哨音</span></div>
+            <button class="text-link open-modal" data-entry="cockatiel">查看完整條目 ↗</button>
+          </div>
+        </article>
+
+        <article class="species-card" data-size="medium" id="african-grey">
+          <div class="species-media gradient-grey">
+            <span class="media-label">IMAGE SLOT</span>
+            <div class="mini-parrot grey-mini"></div>
+          </div>
+          <div class="species-content">
+            <div class="meta-row"><span>03 / 非洲灰鸚鵡</span><span>中型</span></div>
+            <h3>African Grey</h3>
+            <p>低彩度外表，藏著高密度的觀察力。灰色羽毛層次細膩，鮮紅尾羽像是一個精準的視覺句點。</p>
+            <div class="tags"><span>觀察力</span><span>模仿聲音</span><span>灰階羽色</span></div>
+            <button class="text-link open-modal" data-entry="african-grey">查看完整條目 ↗</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section media-section" id="media">
+      <div class="section-heading stacked">
+        <p class="eyebrow">MODULAR CONTENT</p>
+        <h2>一個條目，可以不只是一篇文章。</h2>
+        <p>每個鸚鵡條目都能沿用相同資料結構，加入文字、圖片、影片、HTML 互動作品與簡報；未來只要新增資料，不必重做版面。</p>
+      </div>
+      <div class="media-grid">
+        <div class="media-tile"><span>01</span><b>文字 / Text</b><p>介紹、觀察筆記、飼養知識、物種資訊。</p></div>
+        <div class="media-tile"><span>02</span><b>圖片 / Image</b><p>單張、相簿、圖說與攝影作品。</p></div>
+        <div class="media-tile"><span>03</span><b>影片 / Video</b><p>YouTube、Vimeo 或自有 MP4 嵌入。</p></div>
+        <div class="media-tile"><span>04</span><b>HTML 作品</b><p>互動圖鑑、小遊戲、資料視覺化 iframe。</p></div>
+        <div class="media-tile"><span>05</span><b>簡報 / Slides</b><p>PDF、Google Slides 或嵌入式簡報。</p></div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <p class="eyebrow">DESIGN SYSTEM</p>
+      <h2>自然不是背景，而是整個介面的節奏。</h2>
+      <p>視覺系統採深墨綠、葉片青綠、熱帶橙黃與霧白，搭配大字標題、細線框與圓角卡片。完整色票、字級、間距、RWD 與元件規則都集中記錄在 <code>design.md</code>。</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>羽見 Parrot Atlas</span>
+    <span>Static Web / HTML + CSS + JavaScript</span>
+    <span>© 2026</span>
+  </footer>
+
+  <dialog id="entryModal" class="entry-modal">
+    <button class="modal-close" aria-label="關閉">×</button>
+    <div id="modalContent"></div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
